@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    // question no 1
+
+var firstName = prompt(`Enter your first name : `);
+var lastName = prompt(`Enter your last name : `);
+var fullName = `${firstName} ${lastName}`;
+alert(`hello ${fullName} welcome to my page!`)
+document.write("<hr>")
+
+// Question no 2
+
+var favPhone = prompt(`what is your favorite mobile phone model :`);
+document.write(`<p>Your favorite phone is : ${favPhone} </p>`);
+document.write(`<p>length of string : ${favPhone.length} </p>`);
+document.write("<hr>")
+
+// Question no 3
+
+var word = "pakistani";
+var index = word.indexOf('n')
+document.write(`string : ${word} <br>`)
+document.write(`Index of 'n' is: ${index}`);
+document.write("<hr>")
+
+// Question no 4
+
+var word2 = 'hello world';
+var index2 = word2.lastIndexOf('l')
+document.write(`string : ${word2} <br>`)
+document.write(`Last Index of 'l' is: ${index2}`);
+document.write("<hr>")
+
+// Question no 5
+
+var word3 = "pakistani";
+document.write(`string : ${word3} <br>`)
+document.write(`Character at index 3 : ${word3[3]}`)
+document.write("<hr>")
+
+// Question no 6
+
+var firstName2 = prompt(`Enter your first name : `);
+var lastName2 = prompt(`Enter your last name : `);
+var fullName2 = firstName2.concat(` ${lastName2}`)
+alert(`hello ${fullName2}`)
+document.write("<hr>")
+
+// Question no 7
+
+var city = 'Hyderabad';
+var newCity = city.replace("Hyder","Islam")
+document.write(`City : ${city}<br>After replacement : ${newCity}`)
+document.write("<hr>")
+
+// Question no 8
+
+var message = "Ali and Sami are best friends. They play cricket and football together.";
+var newMessage = message.replace(/and/g,"&")
+document.write(newMessage)
+document.write("<hr>")
+
+// Question no 9
+
+var a = "472";
+var b = Number(a);
+document.write(`Value : ${a} <br>`)
+document.write(`Type ; ${typeof a}<br>` )
+document.write(`Value : ${b} <br>`)
+document.write(`Type ; ${typeof b}<br>` )
+document.write("<hr>")
+
+// Question no 10
+
+var userInput = prompt(`Type your text here :`);
+var output = userInput.toUpperCase();
+document.writeln(`User input : ${userInput}<br>`)
+document.writeln(`Upper case : ${output}<br>`)
+document.write("<hr>")
+
+// Question no 11
+
+var words = prompt(`Type your text here :`);
+var titleCase = `${words[0].toUpperCase()}${words.slice(1).toLowerCase()}`;
+document.writeln(`User input : ${words}<br>Title case : ${titleCase}<br>`)
+document.write("<hr>")
+
+// Question no 12
+
+var x = 35.36;
+var y = x.toString().replace(".","");
+document.write(`Number : ${x}<br>Result : ${y}`);
+document.write("<hr>")
+
+// Question no 13
+
+var m = prompt(`Enter your name : `)
+if(m.indexOf("@") !== -1 ||m.indexOf(".") !== -1 ||m.indexOf(",") !== -1 ||m.indexOf("!") !== -1){
+    alert("Invalid username! Please enter a username without @ . , !");
+}
+else {
+    alert("Welcome, "+m);
+}
+document.write("<hr>")
+
+// Question no 14
+
+var A = ["cake", "apple pie", "cookie", "chips", "patties"];
+var userInput = prompt("Welcome to ABC Bakery. What do you want to order sir/ma'am?");
+userInput = userInput.toLowerCase();
+for (var i =0; i<A.length; i++){
+    if(A[i] === userInput){
+        document.write(`<p>${userInput} is available at index ${i} in our bakery</p>`);
+        break;
+    }
+}
+if(i === A.length){
+    document.write(`<p>We are sorry. ${userInput} is not available in our bakery</p>`);
+}
+document.write("<hr>")
+
+// Question no 15
+
+var password = prompt("Enter password : ");
+
+if(password.length >= 6&&  !(password[0]>="0"&&password[0]<="9")&& /[a-zA-Z]/.test(password)&&/[0-9]/.test(password)){
+    alert("Password accepted!");
+} 
+else {
+    alert("Invalid password! Must be at least 6 characters, start with a letter, and contain letters and numbers.");
+}
+document.write("<hr>")
+
+// Question no 16
+
+var university = "University of Karachi";
+var arr = university.split("");
+for (var i = 0; i < arr.length; i++) {
+    document.write(arr[i] + "<br>");
+}
+document.write("<hr>")
+
+
+// Question no 17
+
+var text = prompt("Enter some text:");
+var lastLetter = text[text.length -1];
+document.write(`User input : ${text}<br>`);
+document.write(`Last character : ${lastLetter}<br>`);
+document.write("<hr>")
+
+
+// Question no 18
+
+var para = "The quick brown fox jumps over the lazy dog";
+var lowerStr = para.toLowerCase();
+var words = lowerStr.split(" ");
+var count = 0;
+for (var i = 0; i < words.length; i++) {
+    if (words[i] === "the") {
+        count++;
+    }
+}
+document.write(`Text : ${para}<br>`)
+document.write(`Number of occurrences of 'the': ${count}<br>`);
+
+
+
+
+</script>
+
+</html>
