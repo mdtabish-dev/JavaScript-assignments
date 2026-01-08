@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCIENTIFIC CALCULATOR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+            <h1>SCIENTIFIC CALCULATOR</h1>
+        <div>
+            <input onblur="func()" type="text" class="input" readonly placeholder="0" id="inputfield">
+
+        </div>
+        <div class="buttons">
+            <button onclick="clearAll()">Ac</button>
+            <button onclick="delChar()">Del</button>
+            <button onclick="getValue('(')">(</button>
+            <button onclick="getValue(')')">)</button>
+            <button onclick="getValue('/')">/</button>
+        </div>
+        <div class="buttons">
+            <button onclick="exp()">Exp</button>
+            <button onclick="getValue('1')">1</button>
+            <button onclick="getValue('2')">2</button>
+            <button  onclick="getValue('3')">3</button>
+            <button  onclick="getValue('*')">*</button>
+        </div>
+        <div class="buttons">
+            <button onclick="ln()">ln</button>
+            <button onclick="getValue('4')">4</button>
+            <button onclick="getValue('5')">5</button>
+            <button onclick="getValue('6')">6</button>
+            <button onclick="getValue('-')">-</button>
+        </div>
+        <div class="buttons">
+            <button onclick="sqrt()">Sqrt</button>
+            <button onclick="getValue('7')">7</button>
+            <button onclick="getValue('8')">8</button>
+            <button onclick="getValue('9')">9</button>
+            <button class="plus" onclick="getValue('+')">+</button>
+        </div>
+        <div class="buttons">
+            <button onclick="sq()">Sq</button>
+            <button onclick="getValue('0')">0</button>
+            <button onclick="getValue('00')">00</button>
+            <button onclick="getValue('.')">.</button>
+        </div>
+        <div class="buttons">
+            <button onclick="cos()">cos</button>
+            <button onclick="sin()">sin</button>
+            <button onclick="tan()">tan</button>
+        </div>
+        <div class="buttons">
+            <button class="equal" onclick="equal()">=</button>
+        </div>
+
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
